@@ -12,7 +12,7 @@
 :- set_sc(max_iter_structure,10).
 :- set_sc(maxdepth_var,4).
 :- set_sc(verbosity,3).
-
+:- set_sc(seed, rand(192,2412,1230)).
 
 in([]).
 
