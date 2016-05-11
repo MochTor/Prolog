@@ -1,6 +1,10 @@
 %%
 % Slipcover adaptation of animals example file (Tree/animals)
 % Originally written to be used with Aleph
+%
+% Notes: to work with Slipcover, some changes has been applied to Alpeh implementation:
+% - class subdivision has been removed, only mammal an not mammal class were left
+% - class predicate has been renamed  into mammal, and it accept just one argument (animal)
 %%
 
 :-use_module(library(slipcover)).
@@ -22,7 +26,7 @@ in([]).
 
 fold(animals,[bat, dog, platypus, eagle, ostrich, shark, crocodile, penguin, t_rex]).
 
-output(class/1).
+output(mammal/0).
 
 input_cw(has_covering/2).
 input_cw(has_legs/2).
@@ -35,25 +39,25 @@ input_cw(has_gills/1).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Mode declarations
 
-:- modeh(1,class(+animal,-class)).
+:- modeh(1,mammal).
 :- modeb(1,has_gills(+animal)).
 :- modeb(1,has_covering(+animal,#covering)).
 :- modeb(1,has_legs(+animal,#nat)).
 :- modeb(1,homeothermic(+animal)).
 :- modeb(1,has_eggs(+animal)).
-:- modeb(1,not(has_gills(+animal))).
-:- modeb(1,nhas_gills(+animal)).
+%:- modeb(1,not(has_gills(+animal))).   Not needed
+%:- modeb(1,nhas_gills(+animal)).   Not needed
 :- modeb(*,habitat(+animal,#habitat)).
 :- modeb(1,has_milk(+animal)).
 
-:-determination(class/1,has_gills/1).
-:-determination(class/1,has_covering/2).
-:-determination(class/1,has_legs/2).
-:-determination(class/1,momeotermic/1).
-:-determination(class/1,has_egss/1).
-:-determination(class/1,nhas_gills/1).
-:-determination(class/1,habitat/2).
-:-determination(class/1,has_milk/1).
+:-determination(mammal/0,has_gills/1).
+:-determination(mammal/0,has_covering/2).
+:-determination(mammal/0,has_legs/2).
+:-determination(mammal/0,momeotermic/1).
+:-determination(mammal/0,has_egss/1).
+%:-determination(mammal/0,nhas_gills/1). Not needed
+:-determination(mammal/0,habitat/2).
+:-determination(mammal/0,has_milk/1).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Database
@@ -73,9 +77,8 @@ covering(hair).  covering(none).  covering(scales).  covering(feathers).
 habitat(land).  habitat(water).  habitat(air).  habitat(caves).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+:-end_bg.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Background knowledge
 
 has_covering(dog,hair).
 has_covering(dolphin,none).
@@ -167,5 +170,12 @@ has_gills(herring).
 has_gills(shark).
 has_gills(eel).
 
-nhas_gills(X) :- animal(X), not(has_gills(X)).
-:-end_bg.
+mammal(bat).
+mammal(dog).
+mammal(platypus).
+neg(mammal(eagle)).
+neg(mammal(ostrich)).
+neg(mammal(shark)).
+neg(mammal(crocodile)).
+neg(mammal(penguin)).
+neg(mammal(t_rex)).
