@@ -4,7 +4,7 @@
 %
 % Notes: to work with Slipcover, some changes has been applied to Alpeh implementation:
 % - class subdivision has been removed, only mammal an not mammal class were left
-% - class predicate has been renamed  into mammal, and it accept just one argument (animal)
+% - class predicate has been renamed  into mammal, and it accepts just one argument (animal)
 %%
 
 :-use_module(library(slipcover)).
