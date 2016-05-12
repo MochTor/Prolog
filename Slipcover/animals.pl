@@ -14,6 +14,9 @@
 :- use_rendering(lpad).
 :- endif.
 
+/** <examples>
+?- induce([animals],P).
+*/
 :-sc.
 
 :- set_sc(megaex_bottom,20).
@@ -28,36 +31,36 @@ fold(animals,[bat, dog, platypus, eagle, ostrich, shark, crocodile, penguin, t_r
 
 output(mammal/0).
 
-input_cw(has_covering/2).
-input_cw(has_legs/2).
-input_cw(has_milk/2).
-input_cw(homeothermic/1).
-input_cw(habitat/2).
-input_cw(has_eggs/1).
-input_cw(has_gills/1).
+input_cw(has_covering/1).
+input_cw(has_legs/1).
+input_cw(has_milk/0).
+input_cw(homeothermic/0).
+input_cw(habitat/1).
+input_cw(has_eggs/0).
+input_cw(has_gills/0).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Mode declarations
 
 modeh(1,mammal).
-modeb(1,has_gills(+animal)).
-modeb(1,has_covering(+animal,#covering)).
-modeb(1,has_legs(+animal,#nat)).
-modeb(1,homeothermic(+animal)).
-modeb(1,has_eggs(+animal)).
+modeb(1,has_gills).
+modeb(1,has_covering(-#covering)).
+modeb(1,has_legs(-#nat)).
+modeb(1,homeothermic).
+modeb(1,has_eggs).
 %modeb(1,not(has_gills(+animal))).   Not needed
 %modeb(1,nhas_gills(+animal)).   Not needed
-modeb(*,habitat(+animal,#habitat)).
-modeb(1,has_milk(+animal)).
+modeb(*,habitat(#habitat)).
+modeb(1,has_milk).
 
-determination(mammal/0,has_gills/1).
-determination(mammal/0,has_covering/2).
-determination(mammal/0,has_legs/2).
-determination(mammal/0,momeotermic/1).
-determination(mammal/0,has_eggs/1).
+determination(mammal/0,has_gills/0).
+determination(mammal/0,has_covering/1).
+determination(mammal/0,has_legs/1).
+determination(mammal/0,momeotermic/0).
+determination(mammal/0,has_eggs/0).
 %determination(mammal/0,nhas_gills/1). Not needed
-determination(mammal/0,habitat/2).
-determination(mammal/0,has_milk/1).
+determination(mammal/0,habitat/1).
+determination(mammal/0,has_milk/0).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Database
@@ -76,8 +79,8 @@ covering(hair).  covering(none).  covering(scales).  covering(feathers).
 
 habitat(land).  habitat(water).  habitat(air).  habitat(caves).
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 :-end_bg.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 has_covering(dog,hair).
