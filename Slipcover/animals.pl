@@ -39,25 +39,25 @@ input_cw(has_gills/1).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Mode declarations
 
-:- modeh(1,mammal).
-:- modeb(1,has_gills(+animal)).
-:- modeb(1,has_covering(+animal,#covering)).
-:- modeb(1,has_legs(+animal,#nat)).
-:- modeb(1,homeothermic(+animal)).
-:- modeb(1,has_eggs(+animal)).
-%:- modeb(1,not(has_gills(+animal))).   Not needed
-%:- modeb(1,nhas_gills(+animal)).   Not needed
-:- modeb(*,habitat(+animal,#habitat)).
-:- modeb(1,has_milk(+animal)).
+modeh(1,mammal).
+modeb(1,has_gills(+animal)).
+modeb(1,has_covering(+animal,#covering)).
+modeb(1,has_legs(+animal,#nat)).
+modeb(1,homeothermic(+animal)).
+modeb(1,has_eggs(+animal)).
+%modeb(1,not(has_gills(+animal))).   Not needed
+%modeb(1,nhas_gills(+animal)).   Not needed
+modeb(*,habitat(+animal,#habitat)).
+modeb(1,has_milk(+animal)).
 
-:-determination(mammal/0,has_gills/1).
-:-determination(mammal/0,has_covering/2).
-:-determination(mammal/0,has_legs/2).
-:-determination(mammal/0,momeotermic/1).
-:-determination(mammal/0,has_egss/1).
-%:-determination(mammal/0,nhas_gills/1). Not needed
-:-determination(mammal/0,habitat/2).
-:-determination(mammal/0,has_milk/1).
+determination(mammal/0,has_gills/1).
+determination(mammal/0,has_covering/2).
+determination(mammal/0,has_legs/2).
+determination(mammal/0,momeotermic/1).
+determination(mammal/0,has_eggs/1).
+%determination(mammal/0,nhas_gills/1). Not needed
+determination(mammal/0,habitat/2).
+determination(mammal/0,has_milk/1).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Database
