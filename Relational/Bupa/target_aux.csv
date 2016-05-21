@@ -1,0 +1,3 @@
+id_aux,relation_name,column_name,ref_relation_name,ref_column_name,sign
+1,bupa,arg1,bupa_name,arg1,fin
+2,bupa,arg2,bupa_type,arg1,fin

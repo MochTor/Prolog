@@ -1,0 +1,13 @@
+id_aux,relation_name,column_name,ref_relation_name,ref_column_name,sign
+1,alkphos,arg1,bupa_name,arg1,fin
+2,alkphos,arg2,xxx,arg2,inf
+3,drinks,arg1,bupa_name,arg1,fin
+4,drinks,arg2,xxx,arg2,inf
+5,gammagt,arg1,bupa_name,arg1,fin
+6,gammagt,arg2,xxx,arg2,inf
+7,mcv,arg1,bupa_name,arg1,fin
+8,mcv,arg2,xxx,arg2,inf
+9,sgot,arg1,bupa_name,arg1,fin
+10,sgot,arg2,xxx,arg2,inf
+11,sgpt,arg1,bupa_name,arg1,fin
+12,sgpt,arg2,xxx,arg2,inf
