@@ -200,7 +200,7 @@ molecule(186,0.595).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Molecule position information
 %%
-% predicate: position(molecule_id,position,flex,h_acceptor,h_doner,pi_acceptor,pi_doner,polar,polarisable,sigma,size).
+% predicate: position(molecule_id,position,branch,flex,h_acceptor,h_doner,pi_acceptor,pi_doner,polar,polarisable,sigma,size).
 
 position(1,1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1).
 position(2,1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1).
