@@ -48,7 +48,7 @@ discounts("Customer Discount",8042,null,null,5.00).
 % Employee information
 %%
 % predicate: employee(emp_id,fname,minit,lname,job_id,job_lvl,pub_id,hire_date).
-% Note: the original dataset put nothing when "minit" arg was missing. I've chosen
+% Note: the original dataset puts nothing when "minit" arg is missing. I've chosen
 %       to put null value instead.
 
 employee("A-C71970F","Aria",null,"Cruz",10,87,1389,"1991-10-26 00:00:00").
@@ -1369,14 +1369,14 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 %%
 % predicate: publishers(pub_id,pub_name,city,state,country).
 
-publishers(0736,"New Moon Books",boston,ma,usa).
-publishers(0877,"Binnet & Hardley",washington,dc,usa).
-publishers(1389,"Algodata Infosystems",berkeley,ca,usa).
-publishers(1622,"Five Lakes Publishing",chicago,il,usa).
-publishers(1756,"Ramona Publishers",dallas,tx,usa).
+publishers(0736,"New Moon Books","Boston",ma,usa).
+publishers(0877,"Binnet & Hardley","Washington",dc,usa).
+publishers(1389,"Algodata Infosystems","Berkeley",ca,usa).
+publishers(1622,"Five Lakes Publishing","Chicago",il,usa).
+publishers(1756,"Ramona Publishers","Dallas",tx,usa).
 publishers(9901,"GGG&G","Mnchen",null,germany).
 publishers(9952,"Scootney Books","New York",ny,usa).
-publishers(9999,"Lucerne Publishing",paris,null,france).
+publishers(9999,"Lucerne Publishing","Paris",null,france).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
