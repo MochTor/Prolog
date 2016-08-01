@@ -2,6 +2,8 @@
 % Prolog program of Triazine example file (Relational/Triazine).
 %
 % Example taken from relational.fit.cvut.cz
+%
+% URL on cplint.lamping.unife: http://cplint.lamping.unife.it/p/triazine.pl
 %%
 
 :-use_module(library(slipcover)).
