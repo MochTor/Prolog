@@ -25,9 +25,29 @@
 :-begin_bg.
 positive(T):-bupa(_,T,t).   %positive to liver disorder
 neg(positive(T)):-bupa(_,T,f).
+
+id_aux(ID):-bupa(ID,_,_).   %id_aux
+name(A):-bupa_name(_,A).    %arg1
+alcohol_value(0.000).   alcohol_value(0.500).   alcohol_value(1.000).   alcohol_value(2.000).   alcohol_value(3.000).   alcohol_value(4.000).
+alcohol_value(5.000).   alcohol_value(6.000).   alcohol_value(7.000).   alcohol_value(8.000).   alcohol_value(9.000).   alcohol_value(10.000).
+
 :-end_bg.
 
 output(positive/0).
+
+input_cw(alkphos/3).
+input_cw(bupa_name/2).
+input_cw(bupa_type/2).
+input_cw(bupa/3).
+input_cw(dependencies_aux/6).
+input_cw(drinks/3).
+input_cw(gammagt/3).
+input_cw(mcv/3).
+input_cw(primForeCons_aux/5).
+input_cw(sgot/3).
+input_cw(sgpt/3).
+input_cw(target_aux/6).
+
 modeh(*,positive).
 
 %%%%%%%%%%%%%%%%
@@ -384,6 +404,7 @@ alkphos(345,t345,99).
 
 %%%%%%%%%%%%%%%%
 % Bupa name base
+% Association between patient ID number and name
 %%
 % predicate: bupa_name(id_aux, arg1).
 
