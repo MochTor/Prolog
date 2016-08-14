@@ -49,6 +49,17 @@ input_cw(sgpt/3).
 input_cw(target_aux/6).
 
 modeh(*,positive).
+modeb(*,alkphos(-idAux,-arg1,-arg2)).
+modeb(*,bupa_name(+idAux,+arg1)).
+modeb(*,bupa_type(+idAux,#bool)).
+modeb(*,dependencies_aux(+idAux,-relation_name,-column_name,-ref_relation_name,-ref_column_name,-sign)).
+modeb(*,drinks(+idAux,+arg1,#val)).
+modeb(*,gammagt(+idAux,+arg1,+arg2)).
+modeb(*,mcv(+idAux,+arg1,+arg2)).
+modeb(*,primForeCons_aux(+idAux,#primRelName,#primFilName,#foreRelName,#foreFilName)).
+modeb(*,sgot(+idAux,+arg1,+arg2)).
+modeb(*,sgpt(+idAux,+arg1,+arg2)).
+modeb(*,target_aux(+idAux,+relation_name,+column_name,+ref_relation_name,+ref_column_name,+sign)).
 
 %%%%%%%%%%%%%%%%
 % Alkphos (alkaline phosphotase) base
