@@ -61,6 +61,18 @@ modeb(*,sgot(+idAux,+arg1,+arg2)).
 modeb(*,sgpt(+idAux,+arg1,+arg2)).
 modeb(*,target_aux(+idAux,+relation_name,+column_name,+ref_relation_name,+ref_column_name,+sign)).
 
+determination(positive/0,alkphos/3).
+determination(positive/0,bupa_name/2).
+determination(positive/0,bupa_type/2).
+determination(positive/0,dependencies_aux/6).
+determination(positive/0,drinks/3).
+determination(positive/0,gammagt/3).
+determination(positive/0,mcv/3).
+determination(positive/0,primForeCons_aux/5).
+determination(positive/0,sgot/3).
+determination(positive/0,sgpt/3).
+determination(positive/0,target_aux/6).
+
 %%%%%%%%%%%%%%%%
 % Alkphos (alkaline phosphotase) base
 %%
