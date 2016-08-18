@@ -28,11 +28,15 @@ molecule_id(ID):-molecule(ID, Ac).
 activity(Ac):-molecule(_, Ac).
 
 output(molecule_id/0).
-modeh(*, molecule_id).
-modeb(*, molecule(-#activity)).
+input_cw(molecule/2).
+input_cw(position/11).
 
-determination(molecule_id/0,molecule/1).
-determination(activity/0,molecule/1).
+modeh(*, molecule_id).
+modeb(*, molecule(-moleculeId,#activity)).
+modeb(*, position(+moleculeId,#position,#branch,#h_acceptor,#h_doner,#pi_acceptor,#pi_doner,#polar,#polarisable,#sigma,#size)).
+
+determination(molecule_id/0,molecule/2).
+determination(molecule_id/0,position/11).
 
 %%%%%%%%%%%%%%%%%%%
 % Molecule information
