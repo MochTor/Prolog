@@ -27,7 +27,13 @@ fold(f2,[27,108,60,77,28,131,141,182,74,112]).
 fold(f3,[92,95,122,50,91,37,54,75,129,80]).
 fold(f4,[68,183,67,7,65,116,87,81,84,180]).
 
+:- begin_bg.
+active :- activity(_Act).
+neg(active) :- \+ active.
+:- end_bg.
+
 output(activity/1).
+output(active/0).
 
 input_cw(p1_flex/1).
 input_cw(p1_pi_doner/1).
@@ -95,7 +101,8 @@ input_cw(p6_branch/1).
 input_cw(p6_sigma/1).
 input_cw(p6_polarisable/1).
 
-modeh(*,activity(-actf)).
+modeh(*,activity(-#actf)).
+modeh(*,active).
 
 modeb(*,p1_flex(-#p1_flex_float)).
 modeb(*,p1_pi_doner(-#p1_p_d_float)).
@@ -231,26 +238,69 @@ determination(activity/1,p6_sigma/1).
 determination(activity/1,p6_polarisable/1).
 
 
-neg(activity(7,0.427)).
-neg(activity(16,0.195)).
-neg(activity(17,0.104)).
-neg(activity(25,0.1)).
-neg(activity(26,0.1)).
-neg(activity(27,0.206)).
-neg(activity(28,0.351)).
-neg(activity(50,0.409)).
-neg(activity(60,0.32)).
-neg(activity(65,0.442)).
-neg(activity(67,0.423)).
-neg(activity(68,0.415)).
-neg(activity(77,0.336)).
-neg(activity(91,0.409)).
-neg(activity(92,0.365)).
-neg(activity(95,0.396)).
-neg(activity(108,0.258)).
-neg(activity(121,0.135)).
-neg(activity(122,0.396)).
-neg(activity(183,0.417)).
+neg(active(7)).
+neg(active(16)).
+neg(active(17)).
+neg(active(25)).
+neg(active(26)).
+neg(active(27)).
+neg(active(28)).
+neg(active(50)).
+neg(active(60)).
+neg(active(65)).
+neg(active(67)).
+neg(active(68)).
+neg(active(77)).
+neg(active(91)).
+neg(active(92)).
+neg(active(95)).
+neg(active(108)).
+neg(active(121)).
+neg(active(122)).
+neg(active(183)).
+
+active(37).
+active(54).
+active(55).
+active(69).
+active(74).
+active(75).
+active(80).
+active(81).
+active(84).
+active(87).
+active(100).
+active(112).
+active(114).
+active(116).
+active(129).
+active(131).
+active(134).
+active(141).
+active(180).
+active(182).
+
+
+activity(7,0.427).
+activity(16,0.195).
+activity(17,0.104).
+activity(25,0.1).
+activity(26,0.1).
+activity(27,0.206).
+activity(28,0.351).
+activity(50,0.409).
+activity(60,0.32).
+activity(65,0.442).
+activity(67,0.423).
+activity(68,0.415).
+activity(77,0.336).
+activity(91,0.409).
+activity(92,0.365).
+activity(95,0.396).
+activity(108,0.258).
+activity(121,0.135).
+activity(122,0.396).
+activity(183,0.417).
 
 activity(37,0.838).
 activity(54,0.838).

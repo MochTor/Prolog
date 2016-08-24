@@ -31,7 +31,14 @@ fold(f3,[pyrimidine029,pyrimidine030,pyrimidine042,pyrimidine048,pyrimidine069,
 fold(f4,[pyrimidine070,pyrimidine071,pyrimidine072,pyrimidine073,pyrimidine074,
          pyrimidine041,pyrimidine044,pyrimidine045,pyrimidine054,pyrimidine056]).
 
+:- begin_bg.
+active :- activity(_Act).
+neg(active) :- \+ active.
+:- end_bg.
+
+
 output(activity/1).
+output(active/0).
 
 input_cw(p1_polar/1).
 input_cw(p1_size/1).
@@ -62,7 +69,8 @@ input_cw(p3_polarizable/1).
 input_cw(p3_sigma/1).
 
 
-modeh(*,activity(-actf)).
+modeh(*,activity(-#actf)).
+modeh(*,active).
 
 modeb(*,p1_polar(-#p1_pol_float)).
 modeb(*,p1_size(-#p1_si_float)).
@@ -120,6 +128,52 @@ determination(activity/1,p3_pi_acceptor/1).
 determination(activity/1,p3_polarizable/1).
 determination(activity/1,p3_sigma/1).
 
+
+active(pyrimidine002).
+active(pyrimidine003).
+active(pyrimidine007).
+active(pyrimidine014).
+active(pyrimidine017).
+active(pyrimidine021).
+active(pyrimidine023).
+active(pyrimidine024).
+active(pyrimidine025).
+active(pyrimidine026).
+active(pyrimidine029).
+active(pyrimidine030).
+active(pyrimidine042).
+active(pyrimidine048).
+active(pyrimidine069).
+active(pyrimidine070).
+active(pyrimidine071).
+active(pyrimidine072).
+active(pyrimidine073).
+active(pyrimidine074).
+
+
+neg(active(pyrimidine001)).
+neg(active(pyrimidine004)).
+neg(active(pyrimidine006)).
+neg(active(pyrimidine010)).
+neg(active(pyrimidine011)).
+neg(active(pyrimidine012)).
+neg(active(pyrimidine013)).
+neg(active(pyrimidine015)).
+neg(active(pyrimidine016)).
+neg(active(pyrimidine022)).
+neg(active(pyrimidine027)).
+neg(active(pyrimidine032)).
+neg(active(pyrimidine033)).
+neg(active(pyrimidine038)).
+neg(active(pyrimidine039)).
+neg(active(pyrimidine041)).
+neg(active(pyrimidine044)).
+neg(active(pyrimidine045)).
+neg(active(pyrimidine054)).
+neg(active(pyrimidine056)).
+
+
+
 p1_polar(pyrimidine001,0.500000).
 p1_size(pyrimidine001,0.260000).
 p1_flex(pyrimidine001,0.100000).
@@ -146,7 +200,7 @@ p3_h_acceptor(pyrimidine001,0.100000).
 p3_pi_donor(pyrimidine001,0.100000).
 p3_pi_acceptor(pyrimidine001,0.100000).
 p3_sigma(pyrimidine001,0.100000).
-neg(activity(pyrimidine001,0.571000)).
+activity(pyrimidine001,0.571000).
 p1_polar(pyrimidine002,0.500000).
 p1_size(pyrimidine002,0.260000).
 p1_flex(pyrimidine002,0.100000).
@@ -227,7 +281,7 @@ p3_h_acceptor(pyrimidine004,0.100000).
 p3_pi_donor(pyrimidine004,0.100000).
 p3_pi_acceptor(pyrimidine004,0.100000).
 p3_sigma(pyrimidine004,0.100000).
-neg(activity(pyrimidine004,0.582000)).
+activity(pyrimidine004,0.582000).
 p1_polar(pyrimidine005,0.100000).
 p1_size(pyrimidine005,0.420000).
 p1_flex(pyrimidine005,0.400000).
@@ -281,7 +335,7 @@ p3_h_acceptor(pyrimidine006,0.900000).
 p3_pi_donor(pyrimidine006,0.100000).
 p3_pi_acceptor(pyrimidine006,0.367000).
 p3_sigma(pyrimidine006,0.100000).
-neg(activity(pyrimidine006,0.549000)).
+activity(pyrimidine006,0.549000).
 p1_polar(pyrimidine007,0.300000).
 p1_size(pyrimidine007,0.420000).
 p1_flex(pyrimidine007,0.100000).
@@ -389,7 +443,7 @@ p3_h_acceptor(pyrimidine010,0.900000).
 p3_pi_donor(pyrimidine010,0.900000).
 p3_pi_acceptor(pyrimidine010,0.367000).
 p3_sigma(pyrimidine010,0.633000).
-neg(activity(pyrimidine010,0.100000)).
+activity(pyrimidine010,0.100000).
 p1_polar(pyrimidine011,0.100000).
 p1_size(pyrimidine011,0.100000).
 p1_flex(pyrimidine011,0.100000).
@@ -416,7 +470,7 @@ p3_h_acceptor(pyrimidine011,0.100000).
 p3_pi_donor(pyrimidine011,0.100000).
 p3_pi_acceptor(pyrimidine011,0.100000).
 p3_sigma(pyrimidine011,0.100000).
-neg(activity(pyrimidine011,0.547000)).
+activity(pyrimidine011,0.547000).
 p1_polar(pyrimidine012,0.100000).
 p1_size(pyrimidine012,0.100000).
 p1_flex(pyrimidine012,0.100000).
@@ -443,7 +497,7 @@ p3_h_acceptor(pyrimidine012,0.100000).
 p3_pi_donor(pyrimidine012,0.100000).
 p3_pi_acceptor(pyrimidine012,0.100000).
 p3_sigma(pyrimidine012,0.100000).
-neg(activity(pyrimidine012,0.568000)).
+activity(pyrimidine012,0.568000).
 p1_polar(pyrimidine013,0.100000).
 p1_size(pyrimidine013,0.100000).
 p1_flex(pyrimidine013,0.100000).
@@ -470,7 +524,7 @@ p3_h_acceptor(pyrimidine013,0.100000).
 p3_pi_donor(pyrimidine013,0.100000).
 p3_pi_acceptor(pyrimidine013,0.100000).
 p3_sigma(pyrimidine013,0.100000).
-neg(activity(pyrimidine013,0.516000)).
+activity(pyrimidine013,0.516000).
 p1_polar(pyrimidine014,0.500000).
 p1_size(pyrimidine014,0.260000).
 p1_flex(pyrimidine014,0.100000).
@@ -524,7 +578,7 @@ p3_h_acceptor(pyrimidine015,0.100000).
 p3_pi_donor(pyrimidine015,0.100000).
 p3_pi_acceptor(pyrimidine015,0.100000).
 p3_sigma(pyrimidine015,0.100000).
-neg(activity(pyrimidine015,0.538000)).
+activity(pyrimidine015,0.538000).
 p1_polar(pyrimidine016,0.100000).
 p1_size(pyrimidine016,0.100000).
 p1_flex(pyrimidine016,0.100000).
@@ -551,7 +605,7 @@ p3_h_acceptor(pyrimidine016,0.100000).
 p3_pi_donor(pyrimidine016,0.100000).
 p3_pi_acceptor(pyrimidine016,0.100000).
 p3_sigma(pyrimidine016,0.100000).
-neg(activity(pyrimidine016,0.531000)).
+activity(pyrimidine016,0.531000).
 p1_polar(pyrimidine017,0.300000).
 p1_size(pyrimidine017,0.420000).
 p1_flex(pyrimidine017,0.100000).
@@ -713,7 +767,7 @@ p3_h_acceptor(pyrimidine022,0.100000).
 p3_pi_donor(pyrimidine022,0.100000).
 p3_pi_acceptor(pyrimidine022,0.100000).
 p3_sigma(pyrimidine022,0.100000).
-neg(activity(pyrimidine022,0.540000)).
+activity(pyrimidine022,0.540000).
 p1_polar(pyrimidine023,0.300000).
 p1_size(pyrimidine023,0.260000).
 p1_flex(pyrimidine023,0.100000).
@@ -848,7 +902,7 @@ p3_h_acceptor(pyrimidine027,0.100000).
 p3_pi_donor(pyrimidine027,0.100000).
 p3_pi_acceptor(pyrimidine027,0.100000).
 p3_sigma(pyrimidine027,0.100000).
-neg(activity(pyrimidine027,0.560000)).
+activity(pyrimidine027,0.560000).
 p1_polar(pyrimidine028,0.100000).
 p1_size(pyrimidine028,0.100000).
 p1_flex(pyrimidine028,0.100000).
@@ -983,7 +1037,7 @@ p3_h_acceptor(pyrimidine032,0.100000).
 p3_pi_donor(pyrimidine032,0.100000).
 p3_pi_acceptor(pyrimidine032,0.100000).
 p3_sigma(pyrimidine032,0.100000).
-neg(activity(pyrimidine032,0.569000)).
+activity(pyrimidine032,0.569000).
 p1_polar(pyrimidine033,0.300000).
 p1_size(pyrimidine033,0.580000).
 p1_flex(pyrimidine033,0.500000).
@@ -1010,7 +1064,7 @@ p3_h_acceptor(pyrimidine033,0.100000).
 p3_pi_donor(pyrimidine033,0.100000).
 p3_pi_acceptor(pyrimidine033,0.100000).
 p3_sigma(pyrimidine033,0.100000).
-neg(activity(pyrimidine033,0.579000)).
+activity(pyrimidine033,0.579000).
 p1_polar(pyrimidine034,0.300000).
 p1_size(pyrimidine034,0.740000).
 p1_flex(pyrimidine034,0.300000).
@@ -1145,7 +1199,7 @@ p3_h_acceptor(pyrimidine038,0.100000).
 p3_pi_donor(pyrimidine038,0.100000).
 p3_pi_acceptor(pyrimidine038,0.100000).
 p3_sigma(pyrimidine038,0.100000).
-neg(activity(pyrimidine038,0.451000)).
+activity(pyrimidine038,0.451000).
 p1_polar(pyrimidine039,0.100000).
 p1_size(pyrimidine039,0.100000).
 p1_flex(pyrimidine039,0.100000).
@@ -1172,7 +1226,7 @@ p3_h_acceptor(pyrimidine039,0.100000).
 p3_pi_donor(pyrimidine039,0.100000).
 p3_pi_acceptor(pyrimidine039,0.100000).
 p3_sigma(pyrimidine039,0.100000).
-neg(activity(pyrimidine039,0.572000)).
+activity(pyrimidine039,0.572000).
 p1_polar(pyrimidine040,0.500000).
 p1_size(pyrimidine040,0.260000).
 p1_flex(pyrimidine040,0.100000).
@@ -1226,7 +1280,7 @@ p3_h_acceptor(pyrimidine041,0.100000).
 p3_pi_donor(pyrimidine041,0.100000).
 p3_pi_acceptor(pyrimidine041,0.100000).
 p3_sigma(pyrimidine041,0.100000).
-neg(activity(pyrimidine041,0.561000)).
+activity(pyrimidine041,0.561000).
 p1_polar(pyrimidine042,0.300000).
 p1_size(pyrimidine042,0.420000).
 p1_flex(pyrimidine042,0.100000).
@@ -1307,7 +1361,7 @@ p3_h_acceptor(pyrimidine044,0.100000).
 p3_pi_donor(pyrimidine044,0.100000).
 p3_pi_acceptor(pyrimidine044,0.100000).
 p3_sigma(pyrimidine044,0.100000).
-neg(activity(pyrimidine044,0.534000)).
+activity(pyrimidine044,0.534000).
 p1_polar(pyrimidine045,0.100000).
 p1_size(pyrimidine045,0.100000).
 p1_flex(pyrimidine045,0.100000).
@@ -1334,7 +1388,7 @@ p3_h_acceptor(pyrimidine045,0.100000).
 p3_pi_donor(pyrimidine045,0.100000).
 p3_pi_acceptor(pyrimidine045,0.100000).
 p3_sigma(pyrimidine045,0.100000).
-neg(activity(pyrimidine045,0.554000)).
+activity(pyrimidine045,0.554000).
 p1_polar(pyrimidine046,0.100000).
 p1_size(pyrimidine046,0.100000).
 p1_flex(pyrimidine046,0.100000).
@@ -1577,7 +1631,7 @@ p3_h_acceptor(pyrimidine054,0.100000).
 p3_pi_donor(pyrimidine054,0.100000).
 p3_pi_acceptor(pyrimidine054,0.100000).
 p3_sigma(pyrimidine054,0.100000).
-neg(activity(pyrimidine054,0.545000)).
+activity(pyrimidine054,0.545000).
 p1_polar(pyrimidine055,0.300000).
 p1_size(pyrimidine055,0.260000).
 p1_flex(pyrimidine055,0.100000).
@@ -1631,7 +1685,7 @@ p3_h_acceptor(pyrimidine056,0.100000).
 p3_pi_donor(pyrimidine056,0.100000).
 p3_pi_acceptor(pyrimidine056,0.100000).
 p3_sigma(pyrimidine056,0.100000).
-neg(activity(pyrimidine056,0.568000)).
+activity(pyrimidine056,0.568000).
 p1_polar(pyrimidine057,0.100000).
 p1_size(pyrimidine057,0.100000).
 p1_flex(pyrimidine057,0.100000).
